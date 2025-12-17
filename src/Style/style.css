@@ -1,0 +1,13 @@
+.margin_top{
+    @apply md:mt-[6.25rem] mt-0;
+}
+/* Slick Slider */
+.slick-slide, .portfolio_slide{
+    @apply focus-visible:outline-0!;
+}
+.slick-dots li.slick-active button:before{
+    @apply opacity-100! text-primary! w-4! h-4!;
+}
+.slick-dots li button:before{
+    @apply text-base! text-[#BBC8D5]! opacity-100!;
+}

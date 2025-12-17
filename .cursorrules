@@ -1,0 +1,145 @@
+# Cursor Rules – Next.js Public Landing Page (SSG, SEO-first)
+
+You are an expert Next.js engineer working on a public-facing marketing / landing site.
+All code must prioritize SEO, accessibility, performance, and static generation.
+
+## Project Architecture
+
+- Use **Next.js App Router (Next.js 13+)**
+- Prefer **Static Site Generation (SSG)** over SSR
+- Avoid runtime rendering unless explicitly required
+- Default to **Server Components**
+- Client Components are allowed only for:
+  - User interactions (forms, modals, animations)
+  - Analytics hooks
+  - Progressive enhancement
+
+## Rendering Strategy
+
+- Pages must use:
+  - `export const dynamic = "force-static"` when applicable
+  - `generateStaticParams` for dynamic routes
+- Avoid `cookies()`, `headers()`, or request-based APIs in pages meant for SSG
+- Prefer build-time data fetching using:
+  - `fetch()` with `{ cache: "force-cache" }`
+  - Static CMS or markdown sources
+
+## SEO Best Practices (Mandatory)
+
+- Every page must define metadata using:
+  - `generateMetadata()`
+- Metadata must include:
+  - `title`
+  - `description`
+  - `alternates.canonical`
+  - Open Graph tags
+  - Twitter Card tags
+- Use semantic HTML:
+  - Exactly one `<h1>` per page
+  - Proper heading hierarchy (`h1 → h2 → h3`)
+- Use descriptive, keyword-rich:
+  - Page titles
+  - Meta descriptions
+  - Image alt text
+- Avoid duplicate content
+- Use clean, readable URLs (kebab-case)
+
+## GEO (Geographic Optimization)
+
+- Include region-aware content where applicable:
+  - Country / city references in copy
+  - `content-language` metadata
+- Use `hreflang` via `alternates.languages` when supporting multiple locales
+- Avoid IP-based or runtime geolocation for core content
+- Prefer static, locale-specific routes (`/en`, `/fr`, `/us`, etc.)
+
+## Performance Requirements
+
+- Must achieve:
+  - Excellent Core Web Vitals (LCP, CLS, INP)
+- Use:
+  - `next/image` for all images
+  - `next/font` for all fonts (no external font loading)
+- Avoid:
+  - Large client-side JavaScript bundles
+  - Unnecessary third-party scripts
+- Use dynamic imports for:
+  - Below-the-fold components
+  - Heavy UI libraries
+- Defer analytics and tracking scripts
+
+## Accessibility (WCAG 2.1 AA)
+
+- All interactive elements must be:
+  - Keyboard accessible
+  - Properly labeled
+- Use semantic elements:
+  - `<main>`, `<nav>`, `<header>`, `<footer>`, `<section>`
+- Images must have:
+  - Meaningful `alt` text
+  - Empty `alt=""` only for decorative images
+- Forms must include:
+  - `<label>` elements
+  - Accessible error messages
+- Do not rely on color alone for meaning
+- Ensure sufficient contrast ratios
+
+## Styling Guidelines
+
+- Prefer **Tailwind CSS**
+- Avoid inline styles unless necessary
+- Mobile-first responsive design
+- Avoid layout shifts:
+  - Define image dimensions
+  - Reserve space for dynamic content
+- Use CSS for animations instead of JavaScript when possible
+
+## Content and Copy
+
+- Copy should be:
+  - Clear, concise, and scannable
+  - Optimized for SEO but human-readable
+- Avoid jargon unless appropriate for the audience
+- Use short paragraphs, bullet points, and headings
+- CTAs must be explicit and accessible
+
+## Analytics and Tracking
+
+- Analytics must:
+  - Be loaded lazily
+  - Not block rendering
+- Prefer privacy-friendly solutions
+- Do not track users without consent where required
+
+## Security and Privacy
+
+- No secrets or API keys in client components
+- Avoid exposing internal APIs
+- Follow GDPR / privacy best practices
+- Cookie usage must be explicit and minimal
+
+## Testing and Quality
+
+- Components should be:
+  - Deterministic
+  - Easy to statically render
+- Avoid non-deterministic behavior at build time
+- Prefer simple logic over abstractions
+- Remove unused code and dependencies
+
+## Anti-Patterns (Strictly Forbidden)
+
+- Using `useEffect` for data fetching on SSG pages
+- Rendering critical content only on the client
+- Using `any` in TypeScript
+- Ignoring accessibility warnings
+- Shipping large, unused dependencies
+- Overusing client components
+
+## General Principles
+
+- SEO > Interactivity
+- Static > Dynamic
+- Accessibility is not optional
+- Performance is a feature
+- Simplicity beats abstraction

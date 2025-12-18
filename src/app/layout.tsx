@@ -1,4 +1,4 @@
-import { DM_Sans } from "next/font/google";
+import { Open_Sans, Unbounded } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -6,7 +6,18 @@ import { ThemeProvider } from "next-themes";
 import SessionProviderComp from "@/components/nextauth/SessionProvider";
 import { AuthDialogProvider } from "./context/AuthDialogContext";
 import ScrollToTop from "@/components/ScrollToTop";
-const dmsans = DM_Sans({ subsets: ["latin"] });
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
+});
 
 export default function RootLayout({
   children,
@@ -15,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${dmsans.className}`}>
+      <body className={`${openSans.className} ${openSans.variable} ${unbounded.variable}`}>
         <AuthDialogProvider>
           <SessionProviderComp session={null}>
             <ThemeProvider

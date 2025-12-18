@@ -22,21 +22,21 @@ export const Heroimage = [
 export const PaymentImage = [
   {
     image: "/images/payment/user.svg",
-    title: "Creează un cont",
+    title: "Formular de risc",
     details:
-      "Creează un cont în câteva minute și începe să folosești platforma în siguranță, fără pași complicați.",
+      "Evaluează riscul de abuz al tău sau al cuiva apropiat ție prin completarea formularului.",
   },
   {
     image: "/images/payment/user.svg",
-    title: "Verifică identitatea",
+    title: "Resurse educaționale",
     details:
-      "Verifică-ți identitatea pentru a-ți proteja datele și pentru a avea acces la funcționalitățile complete.",
+      "Accesează resursele educaționale pentru a afla cum să te protejezi în fața abuzurilor de orice fel.",
   },
   {
     image: "/images/payment/user.svg",
-    title: "Conectează-ți contul bancar",
+    title: "Conectează-te cu un specialist",
     details:
-      "Conectează-ți contul bancar pentru a gestiona plăți și încasări mai ușor (dacă această opțiune este disponibilă).",
+      "Un psiholog sau un avocat verificat de SafeSpace te poate ajuta și ghida spre o viață mai sigură.",
   },
 ];
 
@@ -46,28 +46,25 @@ export const BeneifitImage = [
     image: "/images/benefit/pic.svg",
     alt: "Platformă de încredere",
     details:
-      "Identifică rapid riscurile și primește recomandări utile pentru a crește siguranța și a preveni situațiile de abuz.",
-  },
-  {
-    image: "/images/benefit/contact.svg",
-    alt: "Suport specializat",
-    details: "Accesează resurse și suport specializat, atunci când ai nevoie.",
+      "Identifică din timp comportamentele care duc la abuz sau chiar violența domestică.",
   },
   {
     image: "/images/benefit/bank.svg",
     alt: "Resurse educaționale",
-    details: "Învață din articole și materiale educaționale, explicate clar și pe înțelesul tuturor.",
+    details:
+      "Te învață activ despre abuzuri și cum să te protejezi în fața lor din articole și materiale educaționale.",
   },
   {
-    image: "/images/benefit/files.svg",
-    alt: "Organizare",
-    details: "Păstrează informațiile organizate și ușor de accesat.",
+    image: "/images/benefit/contact.svg",
+    alt: "Suport specializat",
+    details:
+      "Oferă suport psihologic sau juridic specializat în mod gratuit, oricând ai nevoie.",
   },
   {
     image: "/images/benefit/setting.svg",
     alt: "Confidențialitate",
     details:
-      "Prioritizăm confidențialitatea și protecția datelor tale.",
+      "Prioritizează confidențialitatea și protecția datelor tale.",
   },
 ];
 
@@ -116,11 +113,11 @@ export const footerLinks: { link: string }[] = [
     link: "Legal",
   },
   {
-    link: "Confidențialitate",
+    link: "Politica de confidențialitate",
   },
-  {
-    link: "Cookie-uri",
-  },
+  // {
+  //   link: "Cookie-uri",
+  // },
   {
     link: "Declinarea responsabilității",
   },
@@ -129,25 +126,28 @@ export const footerLinks: { link: string }[] = [
 // Perks
 export const perks = [
   {
-    text: "Îți protejăm datele și punem accent pe confidențialitate în fiecare interacțiune.",
+    text: "Completează formularul de risc pentru tine sau pentru cineva apropiat ție pentru a identifica rapid orice fel de abuz și nivelul de risc.",
   },
   {
-    text: "Resursele digitale devin din ce în ce mai importante pentru informare și sprijin rapid.",
+    text: "Accesează resursele educaționale pentru a afla cum să te protejezi pe tine și cei dragi în fața abuzurilor minore de orice fel.",
   },
   {
-    text: "Poți accesa rapid informații utile și pași de urmat, direct din platformă.",
+    text: "În cazul abuzurilor severe sau grave, platforma SafeSpace oferă suport psihologic sau juridic specializat în mod gratuit, oricând ai nevoie.",
+  },
+  {
+    text: "Alătură-te comunității SafeSpace pentru a te conecta cu membrii care au trecut prin experiențe similare pentru a-i ajuta și alții să se protejeze.",
   },
 ];
 
 // review
 export const review = [
   {
-    text: "Este ușor de folosit, iar experiența de suport este excelentă. Informațiile sunt clare și te ajută să iei decizii mai bune. Ce ușurare!",
-    name: "Nina B. Freeman",
-    post: "Fondator la Litchi Care",
+    text: "Platforma SafeSpace este ușor de folosit, iar experiența de suport este excelentă. Informațiile sunt clare și te ajută să iei decizii mai bune. Ce ușurare!",
+    name: "Maria Popescu",
+    post: "Victima de abuz domestic",
     image: "/images/search/profile.png",
-    appstorerating: "4.5",
-    gplayrating: "4.5",
+    appstorerating: "5.0",
+    gplayrating: "5.0",
   },
 ];
 

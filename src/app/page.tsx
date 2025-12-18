@@ -20,12 +20,13 @@ export default function Home() {
       <Hero />
       <Payment />
       <Benefit />
+      <Mobile />
       <Spend />
       <Method />
-      <Mobile />
+      <Solution />
       <Search />
       <Pricing />
-      <Solution />
+
       
     </main>
   );

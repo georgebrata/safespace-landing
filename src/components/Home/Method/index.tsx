@@ -41,14 +41,13 @@ const Method = () => {
         >
           <motion.div {...TopAnimation} className="text-center">
             <h2 className="md:text-35 sm:text-28 text-24 text-midnight_text font-semibold mb-5 dark:text-white lg:max-w-full sm:max-w-75% mx-auto">
-              Multe moduri de a gestiona
+              Moduri gratuite de a gestiona
               <span className="text-primary max-w-max ml-2">
-                plățile online
+                abuzurile
               </span>
             </h2>
-            <p className="font-medium xl:max-w-45% lg:max-w-50% md:max-w-75% text-17 mx-auto text-muted dark:text-white dark:text-opacity-70">
-              Integrează funcționalități financiare puternice în produsul tău —
-              construiește în minute, lansează în câteva săptămâni.
+            <p className="font-medium md:max-w-75% text-17 mx-auto text-muted dark:text-white dark:text-opacity-70">
+              Suntem partenerul tău <b>gratuit</b> în lupta împotriva violenței domestice.
             </p>
           </motion.div>
           <div className="grid grid-cols-2 gap-x-8 gap-y-4 mt-11">
@@ -57,17 +56,16 @@ const Method = () => {
                 <div className="grid xl:grid-cols-2 xl:gap-10">
                   <div className="xl:py-14 py-8 xl:pl-9 px-9">
                     <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                      Carduri fizice și virtuale
+                      Resurse educaționale
                     </h3>
                     <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                      Carduri fizice și virtuale, programabile, pentru persoane
-                      fizice și companii.
+                      Accesează resursele educaționale pentru a afla cum să te protejezi în fața abuzurilor de orice fel.
                     </p>
                     <Link
                       href="#"
                       className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                     >
-                      Începe acum
+                      Accesează resursele
                       <Icon
                         icon="solar:alt-arrow-right-linear"
                         width="13"
@@ -94,17 +92,16 @@ const Method = () => {
               >
                 <div className="flex-1 pl-8 py-5">
                   <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                    Servicii bancare
+                    Linii naționale de urgență
                   </h3>
                   <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                    Soluții flexibile pentru persoane fizice și companii, cu
-                    opțiuni de administrare și integrare.
+                    Accesează numerele naționale de urgență pentru a primi ajutor în caz de urgență.
                   </p>
                   <Link
                     href="#"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
-                    Începe acum
+                    Sună acum
                     <Icon
                       icon="solar:alt-arrow-right-linear"
                       width="13"
@@ -128,17 +125,16 @@ const Method = () => {
               >
                 <div className="flex-1 pl-8 py-5">
                   <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                    Plăți
+                    Chat privat cu un specialist
                   </h3>
                   <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                    Fluxuri de plată configurabile și ușor de integrat în
-                    aplicația ta.
+                    Discută cu un specialist psihologic sau juridic în mod gratuit, oricând ai nevoie.
                   </p>
                   <Link
                     href="#"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
-                    Începe acum
+                    Inițiază discuția
                     <Icon
                       icon="solar:alt-arrow-right-linear"
                       width="13"
@@ -173,17 +169,16 @@ const Method = () => {
                 </div>
                 <div className="flex-1 px-9 flex justify-center flex-col py-9">
                   <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                    Accesează beneficii de până la 175.000$ de la parteneri
+                    Comunitate
                   </h3>
                   <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                    Oferte și avantaje pentru a-ți accelera creșterea și a reduce
-                    costurile de lansare.
+                    Interacționează cu alți utilizatori pentru a împărtăși experiențele și a obține suport din partea membrilor.
                   </p>
                   <Link
                     href="#"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
-                    Începe acum
+                    Intră în comunitate
                     <Icon
                       icon="solar:alt-arrow-right-linear"
                       width="13"

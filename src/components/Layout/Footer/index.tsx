@@ -1,9 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { footerLinks } from "@/app/api/data";
 
 const Footer = () => {
+  const quickLinks: Array<{ label: string; href: string; icon: string; disabled?: boolean }> = [
+    { label: "Formular de risc", href: "/formular-de-risc", icon: "ph:shield-check" },
+    { label: "Resurse educaționale", href: "/blog", icon: "heroicons-outline:document-text" },
+    { label: "Comunitate", href: "/contact", icon: "ph:users-three" },
+    { label: "Jurnal privat (în curând)", href: "/jurnal-privat", icon: "ph:notebook", disabled: true },
+  ];
+
+  const emergencyLinks: Array<{ label: string; href: string; icon: string }> = [
+    { label: "Urgență: 112", href: "tel:112", icon: "ph:phone-call" },
+    { label: "Linia ANES", href: "tel:0800500333", icon: "ph:phone-call" },
+    { label: "Numărul Unic 119", href: "tel:119", icon: "ph:phone-call" },
+  ];
+
+  const legalLinks: Array<{ label: string; href: string }> = [
+    { label: "Termeni și condiții", href: "#" },
+    { label: "Politica de confidențialitate", href: "#" },
+    { label: "Declinarea responsabilității", href: "#" },
+  ];
+
   return (
     <footer className="pt-8 mt-14 bg-midnight_text relative after:content-[''] after:absolute after:bg-[url(/images/footer/bgline.png)] after:bg-no-repeat after:w-52 after:h-24 after:right-0 after:top-28 xl:after:block after:hidden">
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-2">
@@ -12,14 +30,14 @@ const Footer = () => {
             <div className="flex items-center text-foottext text-16">
               <Icon icon="weui:location-outlined" className="w-7 h-7 mr-3" />
               <div className="flex flex-col">
-                <span>221b Baker St, London NW1 6XE,</span>
-                <span>United Kingdom</span>
+                <span>Strada 13 Septembrie 12a, Cluj-Napoca</span>
+                <span>România</span>
               </div>
             </div>
             <div className="flex items-center gap-2 text-foottext">
               <Icon icon="majesticons:phone-retro-line" className="w-7 h-7" />
-              <Link href="#" className="text-16 hover:text-primary">
-                <span> +1 (123) 123 1234</span>
+              <Link href="tel:+40773364612" className="text-16 hover:text-primary">
+                <span> +40773364 612</span>
               </Link>
             </div>
             <div className="flex items-center text-foottext gap-2">
@@ -28,7 +46,7 @@ const Footer = () => {
                 href="#"
                 className="inline-flex items-center text-16 hover:text-primary"
               >
-                <span>info@mobileapp.com</span>
+                <span>contact@safespace.eu</span>
               </Link>
             </div>
           </div>
@@ -45,78 +63,67 @@ const Footer = () => {
           </div>
         </div>
         <div className="grid grid-cols-12 sm:mb-16 mb-8 pt-8 gap-4 relative before:content-[''] before:absolute before:w-20 before:h-20 before:bg-[url(/images/footer/bgcir.png)] before:bg-no-repeat before:-left-36 before:bottom-9 lg:before:block before:hidden">
-          <div className="md:col-span-2 col-span-6 mb-4 md:mb-0">
+          <div className="md:col-span-3 col-span-12 mb-8 md:mb-0">
             <h4 className="text-18 text-white dark:text-white mb-3">
-              Features
+              Link-uri Utile
             </h4>
-            <ul>
-              {footerLinks.slice(0, 4).map((item, index) => (
-                <li key={index} className="pb-3">
-                  <Link
-                    href="#"
-                    className="text-foottext text-16 hover:text-primary"
+            <ul className="space-y-3">
+              {quickLinks.map((item) => (
+                <li key={item.href} className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}>
+                  {item.disabled ? <span className="inline-flex items-center gap-2 text-foottext text-16 opacity-50 cursor-not-allowed">
+                    <Icon icon={item.icon} className="w-5 h-5" aria-hidden="true" />
+                    <span>{item.label}</span>
+                  </span> : <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-2 text-foottext text-16 hover:text-primary"
                   >
-                    {item.link}
+                    <Icon icon={item.icon} className="w-5 h-5" aria-hidden="true" />
+                    <span>{item.label}</span>
                   </Link>
+                  }
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="md:col-span-2 col-span-6 mb-4 md:mb-0">
+          <div className="md:col-span-4 col-span-12 mb-8 md:mb-0">
             <h4 className="text-18 text-white dark:text-white mb-3">
-              Resources
+              Suport de Urgență
             </h4>
-            <ul>
-              {footerLinks.slice(4, 9).map((item, index) => (
-                <li key={index} className="pb-3">
-                  <Link
-                    href="#"
-                    className="text-foottext text-16 hover:text-primary"
+            <ul className="space-y-3">
+              {emergencyLinks.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="inline-flex items-center gap-2 text-foottext text-16 hover:text-primary"
+                    aria-label={item.label}
                   >
-                    {item.link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-3 col-span-6 mb-4 md:mb-0">
-            <h4 className="text-18 text-white dark:text-white mb-3">
-              Platform
-            </h4>
-            <ul>
-              {footerLinks.slice(9, 14).map((item, index) => (
-                <li key={index} className="pb-3">
-                  <Link
-                    href="#"
-                    className="text-foottext text-16 hover:text-primary"
-                  >
-                    {item.link}
-                  </Link>
+                    <Icon icon={item.icon} className="w-5 h-5" aria-hidden="true" />
+                    <span>{item.label}</span>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="md:col-span-5 col-span-12">
-            <p className="text-18 text-white font-bold">Sign up for updates</p>
-            <form className="mt-8">
+            <p className="text-18 text-white font-bold">Hai în comunitate</p>
+            <form className="mt-2">
               <div className="relative">
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Enter your email address"
-                  className="bg-search placeholder:text-foottext text-white! py-3 pl-5"
+                  placeholder="Introdu adresa ta de email"
+                  className="bg-search placeholder:text-gray-300 text-white! py-3 pl-5"
                 />
                 <Icon
                   icon="solar:plain-2-linear"
-                  className="text-22 text-foottext absolute right-5 top-4"
+                  className="text-22 text-foottext absolute right-5 top-4 text-[#666666]"
                 />
               </div>
             </form>
-            <p className="text-18 text-white font-bold py-12">Get App</p>
+            <p className="text-18 text-white font-bold pt-4 pb-1">Descarcă aplicația</p>
             <div className="flex">
               <a href="">
                 <Image
@@ -150,10 +157,10 @@ const Footer = () => {
             </Link>
           </p>
           <div className="flex gap-4">
-            {footerLinks.slice(14, 17).map((item, index) => (
-              <div key={index} className="">
-                <Link href="#" className="text-foottext hover:text-primary">
-                  {item.link}
+            {legalLinks.map((item) => (
+              <div key={item.label}>
+                <Link href={item.href} className="text-foottext hover:text-primary">
+                  {item.label}
                 </Link>
               </div>
             ))}

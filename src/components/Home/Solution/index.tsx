@@ -10,18 +10,22 @@ const Solution = () => {
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div>
               <h2 className="md:text-35 sm:text-28 text-24 font-semibold text-midnight_text dark:text-white">
-                Soluție pentru
-                <span className="text-primary max-w-max ml-2">organizații</span>
+                Ești un
+                <span className="text-primary max-w-max ml-2">psiholog </span>
+                 sau
+                <span className="text-primary max-w-max ml-2">avocat</span>
+                ?
               </h2>
               <p className="mt-6 text-base text-muted dark:text-white dark:text-opacity-70 lg:max-w-full sm:max-w-75%">
-                Soluții flexibile și ușor de integrat, adaptate pentru echipe și
-                organizații.
+                <b>Ajută-ne să ajutăm!</b> 
+                <br />
+                Înscrie-te ca voluntar online și hai să oferim suport specializat pentru victimele abuzurilor de orice fel. Totul 100% remote!
               </p>
               <Link
                 href="/contact"
                 className="lg:text-17 flex gap-4 w-fit items-center bg-primary text-white py-2 px-4 lg:py-3 lg:px-8 rounded-lg mt-12 border border-primary hover:text-primary hover:bg-transparent"
               >
-                Contactează-ne
+                Vreau să fiu voluntar
                 <Icon
                   icon="solar:alt-arrow-right-linear"
                   width="13"

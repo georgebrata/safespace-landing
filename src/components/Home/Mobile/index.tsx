@@ -27,26 +27,19 @@ const Mobile = () => {
         <div ref={ref} className="grid md:grid-cols-12 items-center lg:gap-12 gap-6">
           <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
             <h2 className="lg:text-35 text-24 text-midnight_text font-semibold dark:text-white">
-              Portofele mobile pentru
-              <br />
-              <span className="lg:text-35 text-24 text-primary font-semibold lg:max-w-max">
-                orice situație
+              Platforma 
+              <span className="lg:text-35 text-24 text-primary font-semibold lg:max-w-max ml-2">
+              SafeSpace
               </span>
             </h2>
             <p className="mt-6 text-muted dark:text-white dark:text-opacity-70 lg:text-17 lg:max-w-full max-w-75%">
-              Cardurile emise prin noi pot fi adăugate ușor în portofele mobile,
-              pentru cumpărături online, în magazin sau în aplicații.
+              Platforma SafeSpace te ajută să identifici rapid, ușor și gratuit comportamentele care duc la violeța domestică astfel încât să te poți proteja în fața lor.
             </p>
             <div className="flex flex-col gap-6 mt-16">
               {perks.map((item, index) => (
                 <div key={index} className="flex items-start gap-5">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                    <Icon
-                      icon="solar:unread-outline"
-                      width="24"
-                      height="24"
-                      className="text-white"
-                    />
+                  <div className="w-10 h-6 bg-primary text-white rounded-full flex items-center justify-center">
+                    {index + 1}
                   </div>
                   <p className="text-base text-muted dark:text-white dark:text-opacity-70">
                     {item.text}
@@ -59,7 +52,7 @@ const Mobile = () => {
                 href="#"
                 className="lg:text-17 flex gap-4 items-center bg-primary text-white py-2 px-4 lg:py-3 lg:px-8 rounded-lg mt-12 border border-primary hover:text-primary hover:bg-transparent"
               >
-                Începe acum
+                Completează formularul de risc
                 <Icon
                   icon="solar:alt-arrow-right-linear"
                   width="13"
@@ -71,7 +64,7 @@ const Mobile = () => {
           <motion.div {...rightAnimation} className="lg:col-span-6 col-span-12">
             <div className="lg:max-w-full max-w-75% mx-auto">
               <Image
-                src="/images/mobile/mobile.png"
+                src="/images/mobile/safespace mobile image.png"
                 alt="image"
                 width={555}
                 height={634}

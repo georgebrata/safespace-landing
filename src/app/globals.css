@@ -21,22 +21,25 @@
   --z-index-1: 1;
   --z-index-999: 999;
 
-  --color-primary: #2f73f2;
+  /* Brand palette */
+  --color-primary: #0B3A7A;
   --color-danger: #dc3545;
   --color-danger_text: #ff3c78;
   --color-green: #3cd278;
   --color-grey: #8e8e8e;
-  --color-muted: #547593;
-  --color-midnight_text: #102d47;
-  --color-border: #dfebfc;
-  --color-darkmode: #08162b;
-  --color-hero-bg: #f3f9fd;
-  --color-dark-hero-bg: #121c2e;
-  --color-darkheader: #141d2f;
-  --color-dark_border: #253c50;
-  --color-foottext: #668199;
-  --color-search: #163858;
-  --color-dark_b: #1b2c44;
+  --color-muted: #667085;
+  --color-midnight_text: #0F1724;
+
+  /* Derived / supporting tokens */
+  --color-border: #66708533;
+  --color-darkmode: #0F1724;
+  --color-hero-bg: #F5F1E6;
+  --color-dark-hero-bg: #0F1724;
+  --color-darkheader: #0F1724;
+  --color-dark_border: #66708533;
+  --color-foottext: #667085;
+  --color-search: #0F1724;
+  --color-dark_b: #0F1724;
 
   --text-13: 0.8125rem;
   --text-13--line-height: 1.2;
@@ -95,6 +98,7 @@
     body {
         @apply text-base overflow-x-hidden font-normal;
         -webkit-text-size-adjust: 100%;
+        font-family: var(--font-body);
     }
 
     textarea,
@@ -108,22 +112,27 @@
 
     h1 {
         @apply md:text-50 text-28 font-bold text-midnight_text dark:text-white;
+        font-family: var(--font-heading);
     }
 
     h2 {
         @apply md:text-40 text-24 font-bold text-midnight_text dark:text-white;
+        font-family: var(--font-heading);
     }
 
     h3 {
         @apply md:text-28 text-18 font-bold text-white dark:text-primary;
+        font-family: var(--font-heading);
     }
 
     h4 {
         @apply text-24 font-bold text-midnight_text dark:text-primary;
+        font-family: var(--font-heading);
     }
 
     h5 {
         @apply text-22 font-medium text-midnight_text dark:text-primary;
+        font-family: var(--font-heading);
     }
 }
 
@@ -156,5 +165,5 @@
 }
 
 .blog-details hr {
-    @apply border-border dark:border-dark_border
+    @apply border-border dark:border-dark_border;
 }

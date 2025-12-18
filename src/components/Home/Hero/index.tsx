@@ -25,10 +25,10 @@ const Hero = () => {
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) relative z-1 md:max-w-(--breakpoint-md) px-4">
         <div className="grid grid-cols-12 items-center">
           <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
-            <h1 className="md:text-50 sm:text-40 text-28 text-midnight_text lg:text-start mb-9 lg:w-full w-3/4">
+            <h1 className="md:text-40 sm:text-30 text-24 text-midnight_text lg:text-start mb-9 lg:w-full w-3/4">
               Platforma pentru
               <br />
-              <span className="bg-border dark:bg-darkHeroBg  md:text-50 text-36 rounded-lg lg:text-start text-primary max-w-max">
+              <span className="bg-border dark:bg-darkHeroBg  md:text-40 text-30 rounded-lg lg:text-start text-primary max-w-max">
               prevenirea și reducerea
               </span>
               <br />
@@ -99,7 +99,7 @@ const Hero = () => {
             className="lg:col-span-6 col-span-12 pl-20 lg:block hidden"
           >
             <Image
-              src="/images/hero/hero-image.png"
+              src="/images/hero/safespace-hero-image.png"
               alt="image"
               width={498}
               height={651}

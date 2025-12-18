@@ -47,12 +47,11 @@ const Spend: FC = () => {
         <div ref={ref}>
           <motion.div {...TopAnimation} className="text-center">
             <h2 className="md:text-35 sm:text-28 text-24 text-midnight_text font-semibold mb-5 dark:text-white">
-              The best way to
-              <span className="text-primary ml-2">spend and save</span>
+              Cum funcționează
+              <span className="text-primary ml-2">mai exact</span>?
             </h2>
             <p className="text-17 text-muted dark:text-white dark:text-opacity-70 lg:font-medium mx-1 lg:mx-64 mb-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Platforma SafeSpace te ajută să identifici rapid și ușor comportamentele care duc la abuz sau chiar violență domestică și să te protejezi eficient în fața lor.
             </p>
           </motion.div>
           <motion.div {...bottomAnimation} className="flex justify-center items-center">

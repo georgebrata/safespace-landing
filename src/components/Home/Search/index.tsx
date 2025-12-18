@@ -83,9 +83,9 @@ const Search = () => {
               />
             </div>
             <h2 className="text-midnight_text font-bold dark:text-white md:text-35 sm:text-28 text-24">
-              Începe în mai puțin de
-              <span className="lg:text-35 text-primary text-24">
-                15 minute
+              Intra în comunitatea
+              <span className="lg:text-35 text-primary text-24 ml-2">
+                SafeSpace
               </span>
             </h2>
             <div className="md:max-w-75% mx-auto mt-6">
@@ -100,7 +100,7 @@ const Search = () => {
                     href="#"
                     className="text-17 flex items-center bg-primary text-white py-3 px-8 rounded-lg w-36  my-2 border border-primary hover:text-primary hover:bg-transparent"
                   >
-                    Cere demo
+                    Hai cu noi
                   </Link>
                 </div>
               </div>
@@ -114,12 +114,12 @@ const Search = () => {
                   />
                 </div>
                 <p className="ml-4 text-17 text-muted dark:text-white dark:text-opacity-50">
-                  Fără verificări de credit personale sau garanții, cu limite de până la 20× mai mari
+                  Fără spam sau vânzări de date, doar suport și comunitate de ajutor reciproc.
                 </p>
               </div>
             </div>
           </motion.div>
-          <motion.div {...bottomAnimation}>
+          {/* <motion.div {...bottomAnimation}>
             {review.map((item, index) => (
               <div
                 key={index}
@@ -212,7 +212,7 @@ const Search = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

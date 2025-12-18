@@ -21,11 +21,12 @@ const Payment = () => {
   });
 
   const paymentItems = [
-    "Carduri",
-    "Cheltuieli",
-    "Plată facturi",
-    "Contabilitate",
-    "Raportare",
+    "Comunitate",
+    "Evenimente",
+    "Formular de risc",
+    "Ajutor specializat",
+    "Resurse educaționale",
+    "Numere naționale de urgență"
   ];
 
   return (
@@ -37,8 +38,8 @@ const Payment = () => {
         <motion.div {...TopAnimation}>
           <div className="px-4 lg:px-12">
             <h2 className="text-center font-semibold md:text-35 sm:text-28 text-24 mb-8 text-midnight_text dark:text-white lg:mx-44">
-              Simplu și accesibil pentru nevoile tale de plată personale și pentru
-              <span className="text-primary"> afacere </span>.
+              Platforma integrată pentru sprijin
+              <span className="text-primary"> psihologic </span> și <span className="text-primary"> juridic </span> specializat.
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-10">
@@ -62,7 +63,7 @@ const Payment = () => {
             {PaymentImage.map((item, index) => (
               <div key={index}>
                 <motion.div {...bottomAnimation(index)}>
-                  <div className="rounded-full">
+                  {/* <div className="rounded-full">
                     <Image
                       src={item.image}
                       alt={`Pictogramă: ${item.title}`}
@@ -70,7 +71,7 @@ const Payment = () => {
                       height={80}
                       className="rounded-full bg-white p-4 shadow-lg dark:bg-midnight_text"
                     />
-                  </div>
+                  </div> */}
                   <div className="py-4">
                     <p className="lg:text-25 text-22 font-medium text-midnight_text dark:text-white">
                       {item.title}

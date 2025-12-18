@@ -222,13 +222,13 @@ export default async function Post({ params }: Props) {
                         </div>
                       </div>
                       <div className="w-full py-12 px-11 bg-white dark:bg-dark_b shadow-lg rounded-b-lg">
-                        <p className="text-24 mb-4">Abonează-te la newsletter</p>
+                        <p className="text-24 mb-4">Hai în comunitate</p>
                         <input
                           placeholder="Adresă de email"
                           className="p-3 dark:bg-search border border-border dark:border-dark_border rounded-lg mb-2 w-full focus:outline-0 focus:border-primary dark:focus:border-primary"
                         />
                         <button className="bg-primary w-full px-7 border text-base text-white border-primary py-4 rounded-sm hover:bg-transparent hover:text-primary">
-                          Abonează-te
+                          Hai cu noi
                         </button>
                       </div>
                     </div>

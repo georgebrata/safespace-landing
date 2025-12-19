@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-const Method = () => {
+const MethodsToHandleAbuse = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -195,4 +195,4 @@ const Method = () => {
   );
 };
 
-export default Method;
+export default MethodsToHandleAbuse;

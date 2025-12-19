@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { NewsletterForm } from "@/components/Newsletter/NewsletterForm";
 
 const Footer = () => {
   const quickLinks: Array<{ label: string; href: string; icon: string; disabled?: boolean }> = [
-    { label: "Formular de risc", href: "/formular-de-risc", icon: "ph:shield-check" },
-    { label: "Resurse educaționale", href: "/blog", icon: "heroicons-outline:document-text" },
-    { label: "Comunitate", href: "/contact", icon: "ph:users-three" },
-    { label: "Jurnal privat (în curând)", href: "/jurnal-privat", icon: "ph:notebook", disabled: true },
+    { label: "Contact", href: "/contact", icon: "ph:users-three" },
+    { label: "Devino voluntar", href: "/voluntar", icon: "ph:user-plus" },
+    { label: "Formular de risc", href: "/formular-de-risc", icon: "ph:shield-check", disabled: true },
+    { label: "Resurse educaționale", href: "/blog", icon: "heroicons-outline:document-text", disabled: true },
+    { label: "Jurnal privat", href: "/jurnal-privat", icon: "ph:notebook", disabled: true },
   ];
 
   const emergencyLinks: Array<{ label: string; href: string; icon: string }> = [
@@ -51,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-4 mt-4 lg:mt-0">
-            <Link href="#" className="text-muted hover:text-primary">
+            {/* <Link href="#" className="text-muted hover:text-primary">
               <Icon icon="fe:facebook" width="32" height="32" />
             </Link>
             <Link href="#" className="text-muted hover:text-primary">
@@ -59,7 +61,7 @@ const Footer = () => {
             </Link>
             <Link href="#" className="text-muted hover:text-primary">
               <Icon icon="fa6-brands:linkedin" width="32" height="32" />
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="grid grid-cols-12 sm:mb-16 mb-8 pt-8 gap-4 relative before:content-[''] before:absolute before:w-20 before:h-20 before:bg-[url(/images/footer/bgcir.png)] before:bg-no-repeat before:-left-36 before:bottom-9 lg:before:block before:hidden">
@@ -72,10 +74,10 @@ const Footer = () => {
                 <li key={item.href} className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}>
                   {item.disabled ? <span className="inline-flex items-center gap-2 text-foottext text-16 opacity-50 cursor-not-allowed">
                     <Icon icon={item.icon} className="w-5 h-5" aria-hidden="true" />
-                    <span>{item.label}</span>
+                    <span>{item.label + " (în curând)"}</span>
                   </span> : <Link
                     href={item.href}
-                    className="inline-flex items-center gap-2 text-foottext text-16 hover:text-primary"
+                    className="inline-flex items-center gap-2 text-foottext text-16 hover:underline"
                   >
                     <Icon icon={item.icon} className="w-5 h-5" aria-hidden="true" />
                     <span>{item.label}</span>
@@ -95,7 +97,7 @@ const Footer = () => {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="inline-flex items-center gap-2 text-foottext text-16 hover:text-primary"
+                    className="inline-flex items-center gap-2 text-foottext text-16 hover:underline"
                     aria-label={item.label}
                   >
                     <Icon icon={item.icon} className="w-5 h-5" aria-hidden="true" />
@@ -108,22 +110,11 @@ const Footer = () => {
 
           <div className="md:col-span-5 col-span-12">
             <p className="text-18 text-white font-bold">Hai în comunitate</p>
-            <form className="mt-2">
-              <div className="relative">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Introdu adresa ta de email"
-                  className="bg-search placeholder:text-gray-300 text-white! py-3 pl-5"
-                />
-                <Icon
-                  icon="solar:plain-2-linear"
-                  className="text-22 text-foottext absolute right-5 top-4 text-[#666666]"
-                />
-              </div>
-            </form>
-            <p className="text-18 text-white font-bold pt-4 pb-1">Descarcă aplicația</p>
+            <NewsletterForm
+              inputClassName="bg-search placeholder:text-gray-300 text-white! py-3 pl-5 w-full rounded-md pr-14"
+              buttonClassName="absolute right-4 top-1/2 -translate-y-1/2 disabled:opacity-60 disabled:cursor-not-allowed"
+            />
+            {/* <p className="text-18 text-white font-bold pt-4 pb-1">Descarcă aplicația</p>
             <div className="flex">
               <a href="">
                 <Image
@@ -143,20 +134,21 @@ const Footer = () => {
                   className="w-auto h-auto"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex items-center sm:flex-row flex-col justify-between py-10 mt-8">
           <p className="text-16 text-foottext sm:mb-0 mb-4">
-            © Copyright 2025. Created with ❤️ by <Link
+            SafeSpace © Copyright {new Date().getFullYear()}. Created with 💖 + 🤖 by <Link
               href="https://georgebrata.ro"
               target="_blank"
-              className="hover:text-primary"
+              className="hover:underline"
             >
-              George Brata.
+              George.
             </Link>
           </p>
-          <div className="flex gap-4">
+          {/* TODO: legal links are not implemented yet */}
+          {/* <div className="flex gap-4">
             {legalLinks.map((item) => (
               <div key={item.label}>
                 <Link href={item.href} className="text-foottext hover:text-primary">
@@ -164,7 +156,7 @@ const Footer = () => {
                 </Link>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

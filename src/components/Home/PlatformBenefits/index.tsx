@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { Icon } from "@iconify/react";
 import { BeneifitImage } from "@/app/api/data";
 
-const Benefit = () => {
+const PlatformBenefits = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -92,4 +92,4 @@ const Benefit = () => {
   );
 };
 
-export default Benefit;
+export default PlatformBenefits;

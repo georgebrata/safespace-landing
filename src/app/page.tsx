@@ -1,14 +1,14 @@
 import React from "react";
 import { Metadata } from "next";
 import Hero from "@/components/Home/Hero";
-import Payment from "@/components/Home/Payment";
-import Benefit  from "@/components/Home/Benefit";
-import Spend from "@/components/Home/Spend";
-import Method from "@/components/Home/Method";
-import Mobile from "@/components/Home/Mobile";
-import Search from "@/components/Home/Search";
-import Pricing from "@/components/Home/Pricing";
-import Solution from "@/components/Home/Solution";
+import PlatformFunctionalities from "@/components/Home/PlatformFunctionalities";
+import PlatformBenefits from "@/components/Home/PlatformBenefits";
+import HowItWorksVideo from "@/components/Home/HowItWorksVideo";
+import MethodsToHandleAbuse from "@/components/Home/MethodsToHandleAbuse";
+import PlatformProcessSteps from "@/components/Home/PlatformProcessSteps";
+import JoinCommunity from "@/components/Home/JoinCommunity";
+import BecomeVolunteer from "@/components/Home/BecomeVolunteer";
+import AlternativeSupportOptions from "@/components/Home/AlternativeSupportOptions";
 
 export const metadata: Metadata = {
   title: "SafeSpace",
@@ -18,16 +18,14 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Payment />
-      <Benefit />
-      <Mobile />
-      <Spend />
-      <Method />
-      <Solution />
-      <Search />
-      <Pricing />
-
-      
+      <PlatformFunctionalities />
+      <PlatformBenefits />
+      <PlatformProcessSteps />
+      <HowItWorksVideo />
+      <MethodsToHandleAbuse />
+      <BecomeVolunteer />
+      <JoinCommunity />
+      {/* <AlternativeSupportOptions /> */}
     </main>
   );
 }

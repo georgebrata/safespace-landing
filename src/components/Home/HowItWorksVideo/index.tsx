@@ -5,7 +5,7 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Icon } from "@iconify/react";
 
-const Spend: FC = () => {
+const HowItWorksVideo: FC = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -100,4 +100,4 @@ const Spend: FC = () => {
   );
 };
 
-export default Spend;
+export default HowItWorksVideo;

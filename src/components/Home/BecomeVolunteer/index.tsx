@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 
-const Solution = () => {
+const BecomeVolunteer = () => {
   return (
     <section className="dark:bg-darkmode overflow-x-hidden py-14">
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4">
@@ -22,7 +22,7 @@ const Solution = () => {
                 Înscrie-te ca voluntar online și hai să oferim suport specializat pentru victimele abuzurilor de orice fel. Totul 100% remote!
               </p>
               <Link
-                href="/contact"
+                href="/voluntar"
                 className="lg:text-17 flex gap-4 w-fit items-center bg-primary text-white py-2 px-4 lg:py-3 lg:px-8 rounded-lg mt-12 border border-primary hover:text-primary hover:bg-transparent"
               >
                 Vreau să fiu voluntar
@@ -48,4 +48,4 @@ const Solution = () => {
   );
 };
 
-export default Solution;
+export default BecomeVolunteer;

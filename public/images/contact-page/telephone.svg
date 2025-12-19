@@ -1,0 +1,15 @@
+<svg width="38" height="32" viewBox="0 0 38 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-labelledby="mobilePhoneTitle"
+  role="img"
+>
+  <title id="mobilePhoneTitle">Pictogramă telefon mobil</title>
+  <rect width="36" height="36" rx="8" fill="#EDF4FE"/>
+  <g>
+    <rect x="10" y="7" width="16" height="22" rx="3" fill="#2F73F2"/>
+    <rect x="12" y="9" width="12" height="18" rx="1.5" fill="white"/>
+    <rect x="16.5" y="25" width="3" height="1.5" rx="0.75" fill="#CCD7EB"/>
+    <rect x="17" y="10.5" width="2" height="0.5" rx="0.25" fill="#DBE5F5"/>
+  </g>
+</svg>

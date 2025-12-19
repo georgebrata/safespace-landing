@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Icon } from "@iconify/react";
 
-const Pricing = () => {
+const AlternativeSupportOptions = () => {
   type FeatureCell =
     | { kind: "text"; value: string }
     | { kind: "bool"; value: boolean };
@@ -179,4 +179,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default AlternativeSupportOptions;

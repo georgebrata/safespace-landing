@@ -1,15 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { review } from "@/app/api/data";
+import { useNewsletterSignup } from "@/hooks/useNewsletterSignup";
 
-const Search = () => {
+const JoinCommunity = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
+  const [email, setEmail] = useState<string>("");
+  const { status, subscribe } = useNewsletterSignup();
 
   const TopAnimation = {
     initial: { y: "-100%", opacity: 0 },
@@ -63,6 +64,14 @@ const Search = () => {
     return stars;
   };
 
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
+    e.preventDefault();
+    const ok = await subscribe(email);
+    if (ok) setEmail("");
+  };
+
   return (
     <section className="dark:bg-darkmode overflow-hidden py-14">
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) md:max-w-(--breakpoint-md) px-4">
@@ -90,20 +99,44 @@ const Search = () => {
             </h2>
             <div className="md:max-w-75% mx-auto mt-6">
               <div className="flex lg:items-center md:items-start bg-white dark:bg-darkHeroBg shadow-md rounded-2xl overflow-hidden">
-                <input
-                  type="email"
-                  placeholder="Introdu adresa ta de email."
-                  className="grow px-4 py-5 pl-6 text-white dark:text-heroBg text-17 focus:outline-hidden bg-white dark:bg-darkHeroBg hidden md:block"
-                />
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex w-full items-stretch"
+                >
+                  <label className="sr-only" htmlFor="newsletter-email">
+                    Adresa de email
+                  </label>
+                  <input
+                    id="newsletter-email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Introdu adresa ta de email."
+                    className="grow px-4 py-5 pl-6 text-midnight_text dark:text-heroBg text-17 focus:outline-hidden bg-white dark:bg-darkHeroBg"
+                  />
                 <div className="flex lg:items-center lg:justify-start justify-center mr-4">
-                  <Link
-                    href="#"
-                    className="text-17 flex items-center bg-primary text-white py-3 px-8 rounded-lg w-36  my-2 border border-primary hover:text-primary hover:bg-transparent"
+                  <button
+                    type="submit"
+                    disabled={status.state === "submitting"}
+                    aria-busy={status.state === "submitting"}
+                    className="text-17 flex items-center bg-primary text-white py-3 px-8 rounded-lg w-36 my-2 border border-primary hover:text-primary hover:bg-transparent disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     Hai cu noi
-                  </Link>
+                  </button>
                 </div>
+                </form>
               </div>
+              {status.state === "success" && (
+                <p className="mt-4 text-14 text-green dark:text-white dark:text-opacity-70">
+                  Te-ai înscris cu succes în comunitate.
+                </p>
+              )}
+              {status.state === "error" && (
+                <p className="mt-4 text-14 text-danger_text" role="alert">
+                  {status.message}
+                </p>
+              )}
               <div className="flex items-center justify-center my-7">
                 <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
                   <Icon
@@ -219,4 +252,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default JoinCommunity;

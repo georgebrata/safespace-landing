@@ -1,7 +1,7 @@
 import HeroSub from "@/components/SharedComponents/HeroSub";
-import Payment from "@/components/Home/Payment";
-import Benefit from "@/components/Home/Benefit";
-import Spend from "@/components/Home/Spend";
+import PlatformFunctionalities from "@/components/Home/PlatformFunctionalities";
+import PlatformBenefits from "@/components/Home/PlatformBenefits";
+import HowItWorksVideo from "@/components/Home/HowItWorksVideo";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Formular de risc | SafeSpace",
@@ -19,9 +19,9 @@ const Services = () => {
         description="Completează formularul pentru a identifica rapid nivelul de risc și pentru a primi recomandări personalizate."
         breadcrumbLinks={breadcrumbLinks}
       />
-      <Payment />
-      <Benefit />
-      <Spend />
+      <PlatformFunctionalities />
+      <PlatformBenefits />
+      <HowItWorksVideo />
     </>
   );
 };

@@ -78,13 +78,13 @@ const SignUp = () => {
 
       <p className="text-body-secondary mb-4 text-base">
         Prin crearea unui cont ești de acord cu
-        <a href="/#" className="text-primary hover:underline">
+        <a href="/politica-de-confidentialitate" className="ml-2 text-primary hover:underline">
           Politica de confidențialitate
         </a>
-        și
+        {/* și
         <a href="/#" className="text-primary hover:underline">
           Termenii și condițiile
-        </a>
+        </a> */}
       </p>
 
       <p className="text-body-secondary text-base">

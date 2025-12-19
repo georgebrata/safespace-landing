@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { perks } from "@/app/api/data";
 
-const Mobile = () => {
+const PlatformProcessSteps = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -78,4 +78,4 @@ const Mobile = () => {
   );
 };
 
-export default Mobile;
+export default PlatformProcessSteps;

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { PaymentImage } from "@/app/api/data";
 import Image from "next/image";
 
-const Payment = () => {
+const PlatformFunctionalities = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -92,4 +92,4 @@ const Payment = () => {
   );
 };
 
-export default Payment;
+export default PlatformFunctionalities;

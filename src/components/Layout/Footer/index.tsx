@@ -48,7 +48,7 @@ const Footer = () => {
                 href="#"
                 className="inline-flex items-center text-16 hover:text-primary"
               >
-                <span>contact@safespace.eu</span>
+                <span>contact@safespace.ong</span>
               </Link>
             </div>
           </div>

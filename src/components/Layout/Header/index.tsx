@@ -112,13 +112,13 @@ const Header: React.FC = () => {
             </div>
           )} */}
           <Link
-            href="#"
+            href="/voluntar"
             className="hidden lg:flex items-center border border-primary dark:hover:border-primary bg-transparent dark:text-primary text-primary  px-4 py-2  gap-2 rounded-lg text-16 font-semibold hover:bg-primary hover:text-white dark:hover:text-white"
-            onClick={() => {
-              setIsSignUpOpen(true);
-            }}
+            // onClick={() => {
+            //   setIsSignUpOpen(true);
+            // }}
           >
-            Autentificare specialist
+            Devino voluntar
             <Icon icon="solar:arrow-right-linear" width="24" height="24" />
           </Link>
           {isSignUpOpen && (
@@ -185,6 +185,12 @@ const Header: React.FC = () => {
           ))}
           <div className="mt-4 flex flex-col space-y-4 w-full">
             <Link
+              href="/voluntar"
+              className="bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white"
+            >
+              Devino voluntar
+            </Link>
+            {/* <Link
               href="#"
               className="bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white"
               onClick={() => {
@@ -203,7 +209,7 @@ const Header: React.FC = () => {
               }}
             >
               Înregistrare
-            </Link>
+            </Link> */}
           </div>
         </nav>
       </div>

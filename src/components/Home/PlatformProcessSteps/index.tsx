@@ -48,7 +48,7 @@ const PlatformProcessSteps = () => {
               ))}
             </div>
             <div className="flex items-center justify-start">
-              <Link
+              {/* <Link
                 href="/formular"
                 className="lg:text-17 flex gap-4 items-center bg-primary text-white py-2 px-4 lg:py-3 lg:px-8 rounded-lg mt-12 border border-primary hover:text-primary hover:bg-transparent"
               >
@@ -58,7 +58,7 @@ const PlatformProcessSteps = () => {
                   width="13"
                   height="13"
                 />
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
           <motion.div {...rightAnimation} className="lg:col-span-6 col-span-12">

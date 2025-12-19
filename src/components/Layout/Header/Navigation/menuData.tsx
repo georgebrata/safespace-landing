@@ -14,6 +14,6 @@ export const headerData: HeaderItem[] = [
   //   ],
   // },
   { label: "Contact", href: "/contact" },
-  { label: "Devino voluntar", href: "/voluntar" },
+  // { label: "Devino voluntar", href: "/voluntar" },
   // { label: "Docs", href: "/documentation#version" },
 ];

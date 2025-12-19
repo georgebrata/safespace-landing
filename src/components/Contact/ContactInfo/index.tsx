@@ -22,7 +22,7 @@ const ContactInfo = () => {
                   </p>
                 </div>
                 <div>
-                  <Link href="mailto:contact@safespace.eu" className="text-primary text-18 font-medium flex items-center gap-3 group hover:text-midnight_text dark:hover:text-white">
+                  <Link href="mailto:contact@safespace.ong" className="text-primary text-18 font-medium flex items-center gap-3 group hover:text-midnight_text dark:hover:text-white">
                     Trimite un email
                     <ArrowRightIcon className="text-primary group-hover:text-midnight_text dark:group-hover:text-white" />
                   </Link>

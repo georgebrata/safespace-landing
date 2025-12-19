@@ -1,5 +1,5 @@
+# Deployment branch main -> https://safespace.ong
 name: CI Production
-# Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
@@ -35,13 +35,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Generate
-        run: npm run generate
-
       - name: deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp.georgebrata.ro
-          username: deploy@georgebrata.ro
+          server: ftp.safespace.ong
+          username: deploy@safespace.ong
           password: ${{secrets.FTP_PASSWORD}}
-          local-dir: ./dist/
+          local-dir: ./out/

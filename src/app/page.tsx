@@ -21,7 +21,7 @@ export default function Home() {
       <PlatformFunctionalities />
       <PlatformBenefits />
       <PlatformProcessSteps />
-      <HowItWorksVideo />
+      {/* <HowItWorksVideo /> */}
       <MethodsToHandleAbuse />
       <BecomeVolunteer />
       <JoinCommunity />

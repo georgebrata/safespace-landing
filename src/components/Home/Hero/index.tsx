@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="w-full h-full absolute z-0 bg-heroBg rounded-b-[119px] -left-1/4 top-0 dark:bg-midnight_text"></div>
       <div className="container mx-auto lg:max-w-(--breakpoint-xl) relative z-1 md:max-w-(--breakpoint-md) px-4">
         <div className="grid grid-cols-12 items-center">
-          <motion.div {...leftAnimation} className="lg:col-span-6 col-span-12">
+          <motion.div {...leftAnimation} className="lg:col-span-7 col-span-12">
             <h1 className="md:text-40 sm:text-30 text-24 text-midnight_text lg:text-start mb-9 lg:w-full w-3/4">
               Platforma pentru
               <br />
@@ -35,12 +35,13 @@ const Hero = () => {
               violenței domestice
             </h1>
             <p className="sm:text-19 text-16 text-muted dark:text-white dark:text-opacity-70 text-start lg:max-w-full sm:max-w-75%">
-              Ajutăm la identificarea și gestionarea eficientă a riscurilor de violență, oferind suport specializat gratuit pentru victimele abuzurilor de orice fel.
+              Ajutăm la identificarea și gestionarea eficientă a riscurilor de violență, <br/>
+              oferind <b>suport specializat gratuit</b> pentru victimele abuzurilor de orice fel.
             </p>
             <div className="flex items-center mt-12 gap-11">
               <div>
                 <Link
-                  href="#"
+                  href="/formular"
                   className="text-17 flex gap-2 items-center bg-primary text-white py-3 px-8 rounded-lg border border-primary hover:text-primary hover:bg-transparent"
                 >
                   Sunt eu o victimă?
@@ -53,7 +54,7 @@ const Hero = () => {
               </div>
               <div>
                 <Link
-                  href="#"
+                  href="/formular"
                   className="text-17 flex gap-2 items-center text-muted dark:text-white dark:text-opacity-70 hover:text-primary"
                 >
                   Susține o victimă
@@ -79,7 +80,7 @@ const Hero = () => {
                       width={115}
                       height={30}
                       className="block dark:hidden"
-                      style={{ width: "100%", height: "100%" }}
+                      // style={{ width: "100%", height: "100%" }}
                     />
                     <Image
                       src={item.darkimage}
@@ -96,7 +97,7 @@ const Hero = () => {
           </motion.div>
           <motion.div
             {...rightAnimation}
-            className="lg:col-span-6 col-span-12 pl-20 lg:block hidden"
+            className="lg:col-span-5 col-span-12 pl-20 lg:block hidden"
           >
             <Image
               src="/images/hero/safespace-hero-image.png"

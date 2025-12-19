@@ -40,7 +40,7 @@ const PlatformBenefits = () => {
               {...leftAnimation}
               className="xl:col-span-6 col-span-12 sm:block hidden"
             >
-              <div className="xl:px-0 lg:px-20">
+              {/* <div className="xl:px-0 lg:px-20">
                 <Image
                   src="/images/benefit/benefit.png"
                   alt="image"
@@ -48,7 +48,7 @@ const PlatformBenefits = () => {
                   height={304}
                   style={{ width: "100%", height: "100%" }}
                 />
-              </div>
+              </div> */}
             </motion.div>
             <motion.div
               {...rightAnimation}
@@ -79,9 +79,9 @@ const PlatformBenefits = () => {
               <span className="bg-border dark:bg-darkHeroBg rounded-lg text-primary max-w-max ml-2 mr-2">
                intervenţii preventive 
               </span>
-               şi creşte şansele de 
-              <span className="bg-border dark:bg-darkHeroBg rounded-lg text-primary max-w-max mr-2 ml-2">
-              reducere a escaladării 
+               şi <br/>
+              <span className="bg-border dark:bg-darkHeroBg rounded-lg text-primary max-w-max mr-2">
+              reduce escaladarea
               </span>
               abuzurilor.
             </h2>

@@ -1,21 +1,17 @@
 //hero
 export const Heroimage = [
   {
-    lightimage: "/images/hero/google.png",
+    lightimage: "/images/hero/startupweekend-cluj.png",
     darkimage: "/images/hero/google_white.png",
   },
   {
-    lightimage: "/images/hero/pay.png",
+    lightimage: "/images/hero/cluj-startups-logo.png",
     darkimage: "/images/hero/pay_white.png",
   },
   {
-    lightimage: "/images/hero/stripe.png",
+    lightimage: "/images/hero/wolfpack-digital-logo.png",
     darkimage: "/images/hero/stripe_white.png",
-  },
-  {
-    lightimage: "/images/hero/wise.png",
-    darkimage: "/images/hero/wise_white.png",
-  },
+  }
 ];
 
 // payment

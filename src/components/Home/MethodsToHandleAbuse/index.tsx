@@ -7,6 +7,75 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 const MethodsToHandleAbuse = () => {
+  const content = {
+    heading: {
+      titlePrefix: "Moduri gratuite de a gestiona",
+      titleHighlight: "abuzurile",
+      description: (
+        <>
+          Suntem partenerul tău <b>gratuit</b> în lupta împotriva violenței
+          domestice.
+        </>
+      ),
+    },
+    cards: {
+      wide: {
+        title: "Resurse educaționale",
+        description:
+          "Accesează resursele educaționale pentru a afla cum să te protejezi în fața abuzurilor de orice fel.",
+        cta: { href: "/resurse", label: "Accesează resursele" },
+        image: null as null | {
+          src: string;
+          alt: string;
+          width: number;
+          height: number;
+          className?: string;
+        },
+      },
+      left: [
+        {
+          key: "emergency",
+          title: "Linii naționale de urgență",
+          description:
+            "Accesează numerele naționale de urgență pentru a primi ajutor în caz de urgență.",
+          cta: { href: "/resurse", label: "Sună acum" },
+          image: {
+            src: "/images/method/method1.jpg",
+            alt: "Linii naționale de urgență",
+            width: 232,
+            height: 375,
+          },
+        },
+        {
+          key: "specialist-chat",
+          title: "Chat privat cu un specialist",
+          description:
+            "Discută cu un specialist psihologic sau juridic în mod gratuit, oricând ai nevoie.",
+          cta: null as null | { href: string; label: string },
+          image: {
+            src: "/images/method/method3.jpg",
+            alt: "Chat privat cu un specialist",
+            width: 232,
+            height: 375,
+          },
+        },
+      ],
+      right: {
+        title: "Comunitate",
+        description:
+          "Interacționează cu alți utilizatori pentru a împărtăși experiențele și a obține suport din partea membrilor.",
+        cta: null as null | { href: string; label: string },
+        image: {
+          src: "/images/method/method2.png",
+          alt: "Comunitate",
+          width: 232,
+          height: 375,
+          className: "w-full",
+        },
+      },
+    },
+  } as const;
+
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -41,13 +110,13 @@ const MethodsToHandleAbuse = () => {
         >
           <motion.div {...TopAnimation} className="text-center">
             <h2 className="md:text-35 sm:text-28 text-24 text-midnight_text font-semibold mb-5 dark:text-white lg:max-w-full sm:max-w-75% mx-auto">
-              Moduri gratuite de a gestiona
+              {content.heading.titlePrefix}
               <span className="text-primary max-w-max ml-2">
-                abuzurile
+                {content.heading.titleHighlight}
               </span>
             </h2>
             <p className="font-medium md:max-w-75% text-17 mx-auto text-muted dark:text-white dark:text-opacity-70">
-              Suntem partenerul tău <b>gratuit</b> în lupta împotriva violenței domestice.
+              {content.heading.description}
             </p>
           </motion.div>
           <div className="grid grid-cols-2 gap-x-8 gap-y-4 mt-11">
@@ -56,16 +125,16 @@ const MethodsToHandleAbuse = () => {
                 <div className="grid xl:grid-cols-2 xl:gap-10">
                   <div className="xl:py-14 py-8 xl:pl-9 px-9">
                     <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                      Resurse educaționale
+                      {content.cards.wide.title}
                     </h3>
                     <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                      Accesează resursele educaționale pentru a afla cum să te protejezi în fața abuzurilor de orice fel.
+                      {content.cards.wide.description}
                     </p>
                     <Link
-                      href="#"
+                      href={content.cards.wide.cta.href}
                       className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                     >
-                      Accesează resursele
+                      {content.cards.wide.cta.label}
                       <Icon
                         icon="solar:alt-arrow-right-linear"
                         width="13"
@@ -73,85 +142,63 @@ const MethodsToHandleAbuse = () => {
                       />
                     </Link>
                   </div>
-                  <div>
-                    <Image
-                      src="/images/method/card.png"
-                      alt="card"
-                      width={459}
-                      height={289}
-                      className="xl:w-full w-75% mx-auto"
-                    />
-                  </div>
+                  {content.cards.wide.image ? (
+                    <div>
+                      <Image
+                        src={content.cards.wide.image.src}
+                        alt={content.cards.wide.image.alt}
+                        width={content.cards.wide.image.width}
+                        height={content.cards.wide.image.height}
+                        className={content.cards.wide.image.className}
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </motion.div>
             <div className="h-full flex flex-col gap-4 lg:col-span-1 col-span-2">
-              <motion.div
-                {...leftAnimation1}
-                className="bg-white dark:bg-darkmode flex gap-1 items-center rounded-2xl overflow-hidden"
-              >
-                <div className="flex-1 pl-8 py-5">
-                  <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                    Linii naționale de urgență
-                  </h3>
-                  <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                    Accesează numerele naționale de urgență pentru a primi ajutor în caz de urgență.
-                  </p>
-                  <Link
-                    href="#"
-                    className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
+              {content.cards.left.map((card, idx) => {
+                const animationProps = idx === 0 ? leftAnimation1 : leftAnimation2;
+
+                return (
+                  <motion.div
+                    key={card.key}
+                    {...animationProps}
+                    className="bg-white dark:bg-darkmode flex gap-1 items-center rounded-2xl overflow-hidden"
                   >
-                    Sună acum
-                    <Icon
-                      icon="solar:alt-arrow-right-linear"
-                      width="13"
-                      height="13"
-                    />
-                  </Link>
-                </div>
-                <div className="flex-1 w-full h-full">
-                  <Image
-                    src="/images/method/method1.jpg"
-                    alt="image"
-                    width={232}
-                    height={375}
-                    className="w-full h-full"
-                  />
-                </div>
-              </motion.div>
-              <motion.div
-                {...leftAnimation2}
-                className="bg-white dark:bg-darkmode flex gap-1 items-center rounded-2xl overflow-hidden"
-              >
-                <div className="flex-1 pl-8 py-5">
-                  <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                    Chat privat cu un specialist
-                  </h3>
-                  <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                    Discută cu un specialist psihologic sau juridic în mod gratuit, oricând ai nevoie.
-                  </p>
-                  <Link
-                    href="#"
-                    className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
-                  >
-                    Inițiază discuția
-                    <Icon
-                      icon="solar:alt-arrow-right-linear"
-                      width="13"
-                      height="13"
-                    />
-                  </Link>
-                </div>
-                <div className="flex-1 w-full h-full">
-                  <Image
-                    src="/images/method/method3.jpg"
-                    alt="image"
-                    width={232}
-                    height={375}
-                    className="w-full h-full"
-                  />
-                </div>
-              </motion.div>
+                    <div className="flex-1 pl-8 py-5">
+                      <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
+                        {card.title}
+                      </h3>
+                      <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
+                        {card.description}
+                      </p>
+                      {card.cta ? (
+                        <Link
+                          href={card.cta.href}
+                          className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
+                        >
+                          {card.cta.label}
+                          <Icon
+                            icon="solar:alt-arrow-right-linear"
+                            width="13"
+                            height="13"
+                          />
+                        </Link>
+                      ) : null}
+                    </div>
+                    <div className="flex-1 w-full h-full">
+                      <Image
+                        src={card.image.src}
+                        alt={card.image.alt}
+                        width={card.image.width}
+                        height={card.image.height}
+                        className="w-full h-full"
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
             <div className="h-full flex flex-col gap-4 lg:col-span-1 col-span-2">
               <motion.div
@@ -160,21 +207,21 @@ const MethodsToHandleAbuse = () => {
               >
                 <div className="flex-1">
                   <Image
-                    src="/images/method/method2.png"
-                    alt="image"
-                    width={232}
-                    height={375}
-                    className="w-full"
+                    src={content.cards.right.image.src}
+                    alt={content.cards.right.image.alt}
+                    width={content.cards.right.image.width}
+                    height={content.cards.right.image.height}
+                    className={content.cards.right.image.className}
                   />
                 </div>
                 <div className="flex-1 px-9 flex justify-center flex-col py-9">
                   <h3 className="md:text-25 text-20 font-medium text-midnight_text dark:text-white mb-6">
-                    Comunitate
+                    {content.cards.right.title}
                   </h3>
                   <p className="text-muted dark:text-white dark:text-opacity-70 md:text-18 text-16 md:mb-14 mb-8">
-                    Interacționează cu alți utilizatori pentru a împărtăși experiențele și a obține suport din partea membrilor.
+                    {content.cards.right.description}
                   </p>
-                  <Link
+                  {/* <Link
                     href="#"
                     className="text-17 flex gap-2 items-center hover:text-blue-700 text-primary "
                   >
@@ -184,7 +231,7 @@ const MethodsToHandleAbuse = () => {
                       width="13"
                       height="13"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
               </motion.div>
             </div>

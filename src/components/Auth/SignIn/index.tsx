@@ -39,9 +39,9 @@ const Signin = ({ signInOpen }: { signInOpen?: (open: boolean) => void }) => {
 
   return (
     <>
-      <div className="mb-10 text-center mx-auto inline-block max-w-[160px]">
+      {/* <div className="mb-10 text-center mx-auto inline-block max-w-[160px]">
         <Logo />
-      </div>
+      </div> */}
       <SocialSignIn />
       <span className="z-1 relative my-8 block text-center">
         <span className="-z-1 absolute left-0 top-1/2 block h-px w-full bg-border dark:bg-dark_border"></span>

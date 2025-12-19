@@ -7,6 +7,7 @@ import SessionProviderComp from "@/components/nextauth/SessionProvider";
 import { AuthDialogProvider } from "./context/AuthDialogContext";
 import ScrollToTop from "@/components/ScrollToTop";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -61,6 +62,16 @@ export default function RootLayout({
               {children}
               <Footer />
               <ScrollToTop />
+              <Script
+                src="https://t.contentsquare.net/uxa/6d8aaabe42282.js"
+                strategy="afterInteractive"
+              />
+              <Script
+                src="https://cdn.counter.dev/script.js"
+                data-id="03bd5925-48e2-4d33-ae59-d66aaf6acba0"
+                data-utcoffset="2"
+                strategy="afterInteractive"
+              />
             </ThemeProvider>
           </SessionProviderComp>
         </AuthDialogProvider>

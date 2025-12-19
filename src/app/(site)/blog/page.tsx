@@ -3,7 +3,7 @@ import BlogList from "@/components/Blog/BlogList";
 import HeroSub from "@/components/SharedComponents/HeroSub";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Blog | SafeSpace",
+  title: "Blog",
 };
 
 const Page = () => {

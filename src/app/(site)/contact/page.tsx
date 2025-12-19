@@ -8,7 +8,7 @@ import BecomeVolunteer from "@/components/Home/BecomeVolunteer";
 import JoinCommunity from "@/components/Home/JoinCommunity";
 
 export const metadata: Metadata = {
-  title: "Contact | SafeSpace",
+  title: "Contact",
 };
 
 const page = () => {

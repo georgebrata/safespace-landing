@@ -3,7 +3,7 @@ import HeroSub from "@/components/SharedComponents/HeroSub";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pagina 404 | SafeSpace",
+  title: "Pagina 404",
 };
 
 const ErrorPage = () => {

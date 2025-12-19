@@ -4,7 +4,7 @@ import PlatformBenefits from "@/components/Home/PlatformBenefits";
 import HowItWorksVideo from "@/components/Home/HowItWorksVideo";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Formular de risc | SafeSpace",
+  title: "Formular de risc",
 };
 
 const Services = () => {

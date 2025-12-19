@@ -5,7 +5,7 @@ import { ComingSoon } from "@/components/SharedComponents/ComingSoon";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Resurse | SafeSpace",
+  title: "Resurse",
   description: "Resurse educaționale",
   alternates: { canonical: "/resurse" },
 };

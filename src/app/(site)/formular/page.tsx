@@ -5,7 +5,7 @@ import { ComingSoon } from "@/components/SharedComponents/ComingSoon";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Formular | SafeSpace",
+  title: "Formular",
   description: "Formular de risc",
   alternates: { canonical: "/formular" },
 };

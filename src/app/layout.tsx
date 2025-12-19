@@ -9,6 +9,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import type { Metadata } from "next";
 import Script from "next/script";
 
+const SITE_URL = new URL("https://safespace.ong");
+const OG_IMAGE_URL = new URL("/og/safespace-banner.jpg", SITE_URL);
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -27,17 +30,20 @@ export const metadata: Metadata = {
     template: "%s | SafeSpace",
   },
   description: "Platforma pentru prevenirea și reducerea violenței domestice.",
-  metadataBase: new URL("https://safespace.ong"),
+  metadataBase: SITE_URL,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "SafeSpace",
     description: "Platforma pentru prevenirea și reducerea violenței domestice.",
-    url: "https://safespace.ong",
+    url: SITE_URL,
     siteName: "SafeSpace",
     locale: "ro_RO",
     type: "website",
     images: [
       {
-        url: "https://i.ibb.co/fdhvrhNS/safespace-banner.jpg",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "SafeSpace",
@@ -48,7 +54,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SafeSpace",
     description: "Platforma pentru prevenirea și reducerea violenței domestice.",
-    images: ["https://i.ibb.co/fdhvrhNS/safespace-banner.jpg"],
+    images: [OG_IMAGE_URL.toString()],
+  },
+  other: {
+    // Some scrapers prefer explicit secure_url + MIME type.
+    "og:image:secure_url": OG_IMAGE_URL.toString(),
+    "og:image:type": "image/jpeg",
   },
 };
 

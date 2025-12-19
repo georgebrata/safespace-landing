@@ -3,7 +3,7 @@ import HeroSub from "@/components/SharedComponents/HeroSub";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Opțiuni de sprijin alternativ | SafeSpace",
+  title: "Opțiuni de sprijin alternativ",
 };
 
 const page = () => {

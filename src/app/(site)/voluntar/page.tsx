@@ -4,7 +4,7 @@ import HeroSub from "@/components/SharedComponents/HeroSub";
 import { VolunteerRegistrationForm } from "@/components/Volunteer/VolunteerRegistrationForm";
 
 export const metadata: Metadata = {
-  title: "Voluntar | SafeSpace",
+  title: "Voluntar",
   description:
     "Înscrie-te ca voluntar SafeSpace dacă ești avocat sau psiholog. Profilul va fi verificat manual înainte de publicare.",
   alternates: { canonical: "/voluntar" },

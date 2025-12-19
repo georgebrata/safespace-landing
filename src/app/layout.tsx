@@ -27,7 +27,14 @@ export const metadata: Metadata = {
     template: "%s | SafeSpace",
   },
   description: "Platforma pentru prevenirea și reducerea violenței domestice.",
+  metadataBase: new URL("https://safespace.ong"),
   openGraph: {
+    title: "SafeSpace",
+    description: "Platforma pentru prevenirea și reducerea violenței domestice.",
+    url: "https://safespace.ong",
+    siteName: "SafeSpace",
+    locale: "ro_RO",
+    type: "website",
     images: [
       {
         url: "https://i.ibb.co/fdhvrhNS/safespace-banner.jpg",
@@ -39,6 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "SafeSpace",
+    description: "Platforma pentru prevenirea și reducerea violenței domestice.",
     images: ["https://i.ibb.co/fdhvrhNS/safespace-banner.jpg"],
   },
 };

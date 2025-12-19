@@ -139,13 +139,15 @@ const Footer = () => {
         </div>
         <div className="flex items-center sm:flex-row flex-col justify-between py-10 mt-8">
           <p className="text-16 text-foottext sm:mb-0 mb-4">
-            SafeSpace © Copyright {new Date().getFullYear()}. Created with 💖 + 🤖 by <Link
+            SafeSpace © Copyright {new Date().getFullYear()}
+            
+            {/*. Created with 💖 + 🤖 by <Link
               href="https://georgebrata.ro"
               target="_blank"
               className="hover:underline"
             >
               George.
-            </Link>
+            </Link> */}
           </p>
           {/* TODO: legal links are not implemented yet */}
           {/* <div className="flex gap-4">
